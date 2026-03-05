@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&family=Mitr:wght@300;400;500&family=Anton&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-thai: "Mitr", sans-serif;
+  --font-brand: "Anton", sans-serif;
+}
+
+body {
+  @apply bg-neutral-950 text-neutral-100 font-sans;
+}
+
+.thai-font {
+  font-family: var(--font-thai);
+}
+
+.brand-text {
+  font-family: var(--font-brand);
+  @apply tracking-wider uppercase;
+  background: linear-gradient(to bottom, #fff 30%, #38bdf8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 10px rgba(56, 189, 248, 0.5));
+}
+
+.glass {
+  @apply bg-white/5 backdrop-blur-lg border border-white/10;
+}
+
+.glass-dark {
+  @apply bg-black/40 backdrop-blur-xl border border-white/5;
+}
+
+.neon-border {
+  @apply border-sky-500/50 shadow-[0_0_15px_rgba(14,165,233,0.2)];
+}
+
+.neon-text {
+  @apply text-sky-400 drop-shadow-[0_0_8px_rgba(56,189,248,0.5)];
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 3s linear infinite;
+}
+
