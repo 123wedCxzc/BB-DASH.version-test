@@ -22,3 +22,11 @@ export default defineConfig(({mode}) => {
     },
   };
 });
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+
+// https://vitejs.dev/config/
+export default defineConfig({
+  plugins: [react()],
+  base: '/BB-DASH.version-test/', // ใส่ชื่อ Repository ของคุณระหว่างเครื่องหมาย /
+})
